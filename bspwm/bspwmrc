@@ -24,7 +24,7 @@ bspc config gapless_monocle true
 # Правила приложений
 
 xrdb merge $HOME/.Xresources &
-ssh-agent &
+eval $(ssh-agent -s) &
 
 bash $HOME/.config/bspwm/scripts/battery-alert.sh &
 bash $HOME/.config/bspwm/scripts/dunst_start.sh &
@@ -32,6 +32,9 @@ bash $HOME/.config/bspwm/scripts/redshift_start.sh &
 bash $HOME/.config/bspwm/scripts/picom_start.sh &
 bash $HOME/.config/bspwm/scripts/feh_start.sh & 
 bash $HOME/.config/bspwm/scripts/polybar_start.sh &
+xsetroot -cursor_name left_ptr
+setxkbmap -option grp:alt_shift_toggle us,ru
+xset r rate 200 40
 
 
 obsidian
