@@ -2,12 +2,20 @@
 ## Этот репозиторий представляет из себя ключевые файлы моей системы на Arch
 
 neofetch:
+
 OS: Arch Linux x86_64
+
 Kernel: 6.9.10-arch1-1
+
 Packages: 1551 (pacman)
+
 Shell: zsh 5.9
+
 WM: bspwm
+
 Terminal: alacritty
+
+
 
 lsblk:
 
