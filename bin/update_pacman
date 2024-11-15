@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Обновление системы..."
+sudo pacman -Syyu --noconfirm
+
+echo "Очистка кэша пакетов..."
+sudo paccache -r
+
+echo "Удаление неиспользуемых пакетов..."
+sudo pacman -Rns $(pacman -Qdtq) --noconfirm
+
+echo "Очистка кэша pacman..."
+sudo pacman -Sc --noconfirm
+
+echo "Система обновлена и очищена."

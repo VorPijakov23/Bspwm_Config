@@ -15,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -79,15 +79,7 @@ ZSH_THEME="powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=( git zsh-syntax-highlighting zsh-autosuggestions )
 
-if [ -x "$(command -v exa)" ]; then
-	alias ls="exa"
-	alias la="exa --long --all --group"
-fi
-
 source $ZSH/oh-my-zsh.sh
-
-# alias ls="eza --tree --level=1 --icons=always --no-time --no-user --no-permissions"
-alias yy="yazi"
 
 # User configuration
 
@@ -100,11 +92,11 @@ alias yy="yazi"
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch $(uname -m)"
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -117,7 +109,6 @@ alias yy="yazi"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

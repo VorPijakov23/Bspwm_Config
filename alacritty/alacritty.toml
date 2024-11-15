@@ -1,6 +1,3 @@
-# import = ["/home/user/.config/alacritty/themes/custom.toml"]
-
-
 [env]
 TERM = "xterm-256color"
 
@@ -9,9 +6,8 @@ padding.x = 10
 padding.y = 10
 
 decorations = "Buttonless"
-# opacity = 0.92
-opacity = 0.90
-blur = true
+opacity = 0
+blur = false
 
 [font]
 normal.family = "JetBrainsMono Nerd Font"

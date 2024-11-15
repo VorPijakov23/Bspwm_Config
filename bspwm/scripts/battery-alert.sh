@@ -32,16 +32,6 @@ while true; do
 	   [ $capacity -le $critical ]; then
 	  notify-send "Battery critical: $capacity%"
       last="CRITICAL"
-    fi
-    if [ "$capacity" = 69 ]; then
-	    notify-send "Battery is 69"
-    if [ $capacity = "42" ]; then
-	    notify-send "Battery is 42"
-    if [ $capacity = "52" ]; then
-	    notify-senf "Battery is 52"
-
-    fi
-    fi
     fi 
   fi
   sleep 60

@@ -1,0 +1,39 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "$0 <путь_к_файлу> [--only_compile]"
+    exit 1
+fi
+
+file_path="$1"
+start_flag=true
+
+if [ "$2" == "--only_compile" ]; then
+    start_flag=false
+fi
+
+if [ ! -f "$file_path" ]; then
+    echo "Файл не найден!"
+    exit 1
+fi
+
+file_name=$(basename "$file_path" .cpp)
+
+build_dir="$(dirname "$file_path")/build"
+mkdir -p "$build_dir"
+
+if [ ! -w "$build_dir" ]; then
+    echo "Нет прав на запись в каталог $build_dir"
+    exit 1
+fi
+
+clang++ -o "$build_dir/$file_name" "$file_path"
+
+if [ $? -eq 0 ]; then
+    if [ "$start_flag" == true ]; then
+        "$build_dir/$file_name"
+    fi
+else
+    echo "Ошибка компиляции!"
+    exit 1
+fi
