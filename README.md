@@ -29,19 +29,19 @@
 # About files
 ### [bin](bin) - Самописные скрипты, находящиеся в /usr/local/bin/ (Некоторые из них бинарные, так что прочитать исходники не получится).
 
-### [bspwm](bspwm) - Дерриктория, находящаяся в ~/.config/ . Содержит в себе конфигурацию моего bspwm, и папку со скриптами, которые запускаются вместе с bspwm. Сделано именно так, чтобы в любой момент можно было перезапустить их все, просто нажав Super + Alt + r.
+### [bspwm](config_files/bspwm) - Дерриктория, находящаяся в ~/.config/ . Содержит в себе конфигурацию моего bspwm, и папку со скриптами, которые запускаются вместе с bspwm. Сделано именно так, чтобы в любой момент можно было перезапустить их все, просто нажав Super + Alt + r.
 
 ### [docs](docs) - Дерриктория, со изображениями моей системы
 
-### [polybar](polybar) - Дерриктория, содержащая конфигурацию моего polybar. Находиться в ~/.config/ .
+### [polybar](config_files/polybar) - Дерриктория, содержащая конфигурацию моего polybar. Находиться в ~/.config/ .
 
-### [alacritty.toml](alacritty.toml) - Файл конфигурации эмулятора терминала - alacritty. Находиться в ~/.config/alacritty/ .
+### [alacritty.toml](config_files/alacritty.toml) - Файл конфигурации эмулятора терминала - alacritty. Находиться в ~/.config/alacritty/ .
 
-### [sxhkdrc](sxhkdrc) - Файл конфигурации шорткатов моей системы. Находиться по пути ~/.config/sxhkdrc/ .
+### [sxhkdrc](config_files/sxhkdrc) - Файл конфигурации шорткатов моей системы. Находиться по пути ~/.config/sxhkdrc/ .
 
-### [vscode_settings](vscode_settings) - Файл конфигурации Vs code OSS.
+### [vscode_settings](config_files/vscode_settings) - Файл конфигурации Vs code OSS.
 
-### [zshrc](zshrc) - Файл конфигурации моей оболочки zsh. (Как по мне alias с btw, это гениально)
+### [zshrc](config_files/zshrc) - Файл конфигурации моей оболочки zsh. (Как по мне alias с btw, это гениально)
 
 
 # PS.
