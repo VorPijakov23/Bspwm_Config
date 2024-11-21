@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+echo "Обновление системы..."
+yay -Syyu --noconfirm
+
+echo "Очистка кэша пакетов..."
+yay -Scc --noconfirm
+
+echo "Удаление неиспользуемых пакетов..."
+yay -Rns $(yay -Qdtq) --noconfirm
+
+echo "Очистка кэша yay..."
+yay -Yc --noconfirm
+
+echo "Система обновлена и очищена."

@@ -45,5 +45,7 @@
     "editor.codeLensFontFamily": "Jetbrains mono",
     "editor.fontFamily": "Jetbrains mono",
     "editor.fontSize": 14,
-    "window.zoomLevel": -1,
+    "window.zoomLevel": -0.5,
+    "editor.tabSize": 2,
+    "workbench.editor.enablePreview": true
 }

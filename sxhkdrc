@@ -1,34 +1,22 @@
 ################## ЗАПУСК ПРОГРАММ ########################
+
 # Эмулятор терминала
 super + Return
 	alacritty
+
 # Браузер
 super + b
-	brave
-# Лаунчер dmenu
-super + r
-	dmenu_run
+	firefox
+
 # Смена обоев
-super + z
-	feh --randomize --no-fehbg --bg-fill $HOME/Pictures/wallpaper/
+#super + z
+#	feh --randomize --no-fehbg --bg-fill /data/Pictures/wallpaper/
 
-# Базовый бар
-super + shift + z
-	bash $HOME/.config/polybar/launch.sh
-
-# Поиск цвета
-super + shift + x
-	bash $HOME/.bin/xcolor-pick
-super + shift + {z,x,t,o,n,e,s,c,g}
-	{bash $HOME/.bin/screen-lock, \
-	bash $HOME/.bin/xcolor-pick, \
-	telegram-desktop, \
+super + shift + {t,o,x}
+	{telegram-desktop, \
 	obsidian, \
-	thunar, \
-	dolphin, \
-	signal-desktop, \
-	code, \
-	bash $HOME/.bin/bible}
+	xcolor-pick
+	}
 
 # rofi menu 
 super + space
@@ -130,7 +118,7 @@ Print
 
 # Volume controls
 XF86Audio{RaiseVolume,LowerVolume,Mute}
-    sh $HOME/.bin/volume{ --up, --down, --toggle}
+    volume{ --up, --down, --toggle}
 
 # Brightness controls
 XF86MonBrightness{Up,Down}

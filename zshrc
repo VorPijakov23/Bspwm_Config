@@ -105,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
+alias btw="neofetch"
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
