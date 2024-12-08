@@ -39,7 +39,7 @@
 
 ### [sxhkdrc](config_files/sxhkdrc) - Файл конфигурации шорткатов моей системы. Находиться по пути ~/.config/sxhkdrc/ .
 
-### [vscode_settings](config_files/vscode_settings) - Файл конфигурации Vs code OSS.
+### [nvim](config_files/nvim) - Конфигурация Neo vim (Перешёл с Vs code Oss, пишу свой конфиг с нуля, а пока что NvChad)
 
 ### [zshrc](config_files/zshrc) - Файл конфигурации моей оболочки zsh. (Как по мне alias с btw, это гениально)
 
