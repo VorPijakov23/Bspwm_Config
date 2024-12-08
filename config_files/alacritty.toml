@@ -16,4 +16,4 @@ normal.family = "Cascadia Code"
 size = 9.2
 
 [cursor]
-style = "Beam"  # or "Block", "Underline", etc.
+style = "Block"  # or "Block", "Underline", etc.
