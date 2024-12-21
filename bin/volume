@@ -12,7 +12,7 @@ down_volume() {
 	pamixer -d 2 --unmute
 }
 
-toggle_mute() {
+toggle() {
     status=$(pamixer --get-mute)
 
 	if [[ "$status" == "true" ]]; then
@@ -28,7 +28,7 @@ if [[ "$1" == "--up" ]]; then
 elif [[ "$1" == "--down" ]]; then
   down_volume
 elif [[ "$1" == "--toggle" ]]; then
-	toggle_mute
+	toggle
 else
 	get_volume
 fi

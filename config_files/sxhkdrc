@@ -1,16 +1,17 @@
 ################## ЗАПУСК ПРОГРАММ ########################
 
-# Эмулятор терминала
+# Terminal
 super + Return
+  st
+super + shift + Return
 	alacritty
-
-# Браузер
+  
+# Browser
 super + b
-	firefox
+	firefox # qutebrowser, palemoon
 
-# Смена обоев
-#super + z
-#	feh --randomize --no-fehbg --bg-fill /data/Pictures/wallpaper/
+super + shift + b
+  qutebrowser
 
 super + shift + {t,o,x,e}
 	{telegram-desktop, \
