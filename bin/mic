@@ -6,7 +6,7 @@ status=$(pactl get-source-mute alsa_input.pci-0000_03_00.6.analog-stereo | grep 
 
 get_toggle() {
   if [[ "$status" = "yes" ]]; then 
-    echo ""
+    echo " "
   else
     echo ""
   fi
