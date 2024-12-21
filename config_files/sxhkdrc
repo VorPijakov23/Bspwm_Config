@@ -12,15 +12,37 @@ super + b
 #super + z
 #	feh --randomize --no-fehbg --bg-fill /data/Pictures/wallpaper/
 
-super + shift + {t,o,x}
+super + shift + {t,o,x,e}
 	{telegram-desktop, \
 	obsidian, \
-	xcolor-pick
+	xcolor-pick, \
+  pavucontrol
 	}
 
 # rofi menu 
 super + space
 	rofi -show drun
+
+
+
+################## Клавиши F1 - F12 ##################
+# Flameshot control
+Print
+	flameshot gui
+
+# Volume controls
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+    volume{ --up, --down, --toggle}
+
+# Brightness controls
+XF86MonBrightness{Up,Down}
+	{brightnessctl set +5%,brightnessctl set 5%-}
+
+# Toggle mic
+XF86AudioMicMute
+  mic --toggle
+
+
 
 ################## BSPWM/SXHKD ##################
 # Выйти/перезапустить bspwm
@@ -42,6 +64,8 @@ super + g
 super + Escape
 	pkill -USR1 -x sxhkd	
 	
+
+
 ###### СОСТОЯНИЕ\ФЛАГИ ######
 # Установить режим окна
 super + f
@@ -53,6 +77,8 @@ super + f
 # Установить флаг узла
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
+
+
 
 ################## ФОКУС/ПЕРМЕЩЕНИЕ ##################
 # Фокус на ноду в выбранном направлении
@@ -99,6 +125,8 @@ super + ctrl + space
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
+
+
 ################## Перемещение/Изменение размера ##################
 # Увеличить окно сдвинув одну из его сторон
 super + alt + {h,j,k,l}
@@ -109,21 +137,3 @@ super + alt + shift + {h,j,k,l}
 # Перемещение плавающих окон
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-
-
-################## Клавиши F1 - F12 ##################
-Print
-	flameshot gui
-
-# Volume controls
-XF86Audio{RaiseVolume,LowerVolume,Mute}
-    volume{ --up, --down, --toggle}
-
-# Brightness controls
-XF86MonBrightness{Up,Down}
-	{brightnessctl set +5%,brightnessctl set 5%-}
-
-# Toggle microphone
-XF86AudioMute
-    pactl set-source-mute @DEFAULT_SOURCE@ toggle

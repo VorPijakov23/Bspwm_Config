@@ -1,9 +1,3 @@
-
-vim.opt.wrap = false
-vim.opt.linebreak = false
-vim.opt.textwidth = 0
-vim.opt.formatoptions:remove("t")
-
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
@@ -41,4 +35,3 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
-

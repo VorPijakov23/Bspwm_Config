@@ -1,4 +1,5 @@
 #!/bin/env bash
+
 killall -q redshift-gtk
 
 sleep 5

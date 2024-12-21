@@ -1,10 +1,10 @@
 [global]
 monitor = 0
 follow = mouse
-width = 280
-height = 80
+width = 230
+height = 30
 origin = top-right
-offset = 10x48
+offset = (10, 48)  # Исправлено: правильный синтаксис (N, N)
 indicate_hidden = yes
 shrink = no
 separator_color = auto
@@ -34,11 +34,7 @@ always_run_script = true
 title = Dunst
 class = Dunst
 
-[shortcuts]
-close = ctrl+shift+space
-close_all = ctrl+shift+space
-history = ctrl+grave
-context = ctrl+shift+period
+# Удалена устаревшая секция [shortcuts]
 
 [urgency_low]
 timeout = 2
