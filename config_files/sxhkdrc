@@ -37,7 +37,7 @@ XF86Audio{RaiseVolume,LowerVolume,Mute}
 
 # Brightness controls
 XF86MonBrightness{Up,Down}
-	{brightnessctl set +5%,brightnessctl set 5%-}
+	{brightnessctl set +2%,brightnessctl set 2%-}
 
 # Toggle mic
 XF86AudioMicMute
