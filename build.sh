@@ -7,7 +7,7 @@ scripts_dir="./config_files/"
 
 for arg in "$@"; do
 	if [ "$arg" == "-c" ] || [ "$arg" == "--clean" ] || [ "$arg" == "--clear" ]; then
-		rm -rf $scripts_dir bin
+		sudo rm -rf $scripts_dir ./bin
 		break
 	fi
 done
@@ -15,7 +15,7 @@ done
 
 mkdir -p $scripts_dir 
 
-cp -r $bin_scripts . 
+sudo cp -r $bin_scripts . 
 cp -r $HOME/.config/alacritty/* $scripts_dir
 cp -r $HOME/.config/bspwm/ $scripts_dir
 cp -r $HOME/.config/polybar/ $scripts_dir

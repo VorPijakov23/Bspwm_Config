@@ -1,6 +1,13 @@
 #!/bin/env bash
 
+coordinates=$(cat $HOME/.config/redshift_configuration)
+
+if [ -z "$coordinates" ]; then
+  echo "redshift_start.sh: Config file is not exists"
+  exit 1
+fi
+
 killall -q redshift-gtk
 
 sleep 5
-redshift-gtk -l 54.9022:83.0335 -t 5700:3500
+redshift-gtk -l "$coordinates" -t 5700:3500

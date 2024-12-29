@@ -5,6 +5,7 @@
  - WM: [**`BSPWM`**](https://github.com/baskerville/bspwm)
  - Bar: [**`Polybar`**](https://github.com/polybar/polybar)
  - Terminal: [**`Alacritty`**](https://github.com/alacritty/alacritty)
+ - Another Terminal: [**`st`**](https://st.suckless.org/)
  - App Launcher: [**`Rofi`**](https://github.com/davatorium/rofi)
  - Notify Daemon: [**`Dunst`**](https://github.com/dunst-project/dunst)
  - Shell: [**`Zsh`**](https://github.com/ohmyzsh/ohmyzsh.git)
@@ -27,24 +28,24 @@
 #### 5 - 16Gb - [SWAP] (Так много, потому что некуда было 16 гигов девать)
 
 # About files
-### [bin](bin) - Самописные скрипты, находящиеся в /usr/local/bin/ (Некоторые из них бинарные, так что прочитать исходники не получится).
+#### [bin](bin) - Самописные скрипты, находящиеся в /usr/local/bin/ (Некоторые из них бинарные, так что прочитать исходники не получится).
 
-### [bspwm](config_files/bspwm) - Дерриктория, находящаяся в ~/.config/ . Содержит в себе конфигурацию моего bspwm, и папку со скриптами, которые запускаются вместе с bspwm. Сделано именно так, чтобы в любой момент можно было перезапустить их все, просто нажав Super + Alt + r.
+#### [bspwm](config_files/bspwm) - Дерриктория, находящаяся в ~/.config/ . Содержит в себе конфигурацию bspwm, и папку со скриптами, которые запускаются вместе с bspwm. Сделано именно так, чтобы в любой момент можно было перезапустить их все, просто нажав Super + Alt + r.
 
-### [docs](docs) - Дерриктория, со изображениями моей системы
+#### [docs](docs) - Дерриктория, со изображениями системы
 
-### [polybar](config_files/polybar) - Дерриктория, содержащая конфигурацию моего polybar. Находиться в ~/.config/ .
+#### [polybar](config_files/polybar) - Дерриктория, содержащая конфигурацию polybar. Находиться в ~/.config/ .
 
-### [alacritty.toml](config_files/alacritty.toml) - Файл конфигурации эмулятора терминала - alacritty. Находиться в ~/.config/alacritty/ .
+#### [alacritty.toml](config_files/alacritty.toml) - Файл конфигурации эмулятора терминала - alacritty. Находиться в ~/.config/alacritty/ .
 
-### [sxhkdrc](config_files/sxhkdrc) - Файл конфигурации шорткатов моей системы. Находиться по пути ~/.config/sxhkdrc/ .
+#### [sxhkdrc](config_files/sxhkdrc) - Файл конфигурации шорткатов системы. Находиться по пути ~/.config/sxhkdrc/ .
 
-### [nvim](config_files/nvim) - Конфигурация Neo vim (Перешёл с Vs code Oss, пишу свой конфиг с нуля, а пока что NvChad)
+#### [nvim](config_files/nvim) - Конфигурация Neo vim (Перешёл с Vs code Oss, пишу свой конфиг, а пока что NvChad)
 
-### [zshrc](config_files/zshrc) - Файл конфигурации моей оболочки zsh. (Как по мне alias с btw, это гениально)
+#### [zshrc](config_files/zshrc) - Файл конфигурации оболочки zsh. (Как по мне alias с btw, это гениально)
 
 
 # PS.
-Данная конфигурация писалась сомостоятельно втечении чуть больше полугода. Именно столько я пользуюсь Arch linux и линукс в целом (И да, мой первый линукс именно Arch, и ставил его своими руками, а не через скрипт, как можно подумать).
+Данная конфигурация писалась сомостоятельно втечении чуть больше полугода. Именно столько я пользуюсь Arch linux и линукс в целом (И да, мой первый линукс именно Arch, и ставил его своими руками, а не через скрипт, как можно подумать XD).
 
-В планах перейти на DWM и поменять эмулятор терминала, на более легковесный использующий Vulkan API, а не OpenGL.
+Дальше планируется переходить на sway, с последующей заменой всех утилит, которые я использую сейчас
