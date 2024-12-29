@@ -1,16 +1,15 @@
-#!/bin/bash
+#!/bin/env bash
 
-
-echo "Обновление системы..."
+echo "System upgrade..."
 yay -Syyu --noconfirm
 
-echo "Очистка кэша пакетов..."
+echo "Clear cache..."
 yay -Scc --noconfirm
 
-echo "Удаление неиспользуемых пакетов..."
+echo "Remoove unused packages..."
 yay -Rns $(yay -Qdtq) --noconfirm
 
-echo "Очистка кэша yay..."
+echo "Clear cache yay..."
 yay -Yc --noconfirm
 
-echo "Система обновлена и очищена."
+echo "________________END________________"

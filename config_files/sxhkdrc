@@ -10,9 +10,6 @@ super + shift + Return
 super + b
 	firefox # qutebrowser, palemoon
 
-super + shift + b
-  qutebrowser
-
 super + shift + {t,o,x,e}
 	{telegram-desktop, \
 	obsidian, \
@@ -23,7 +20,6 @@ super + shift + {t,o,x,e}
 # rofi menu 
 super + space
 	rofi -show drun
-
 
 
 ################## Клавиши F1 - F12 ##################
@@ -42,7 +38,6 @@ XF86MonBrightness{Up,Down}
 # Toggle mic
 XF86AudioMicMute
   mic --toggle
-
 
 
 ################## BSPWM/SXHKD ##################

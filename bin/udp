@@ -1,15 +1,15 @@
-#!/bin/bash
+#!/bin/env bash
 
-echo "Обновление системы..."
+echo "System upgrade..."
 sudo pacman -Syyu --noconfirm
 
-echo "Очистка кэша пакетов..."
+echo "Clear cache..."
 sudo paccache -r
 
-echo "Удаление неиспользуемых пакетов..."
+echo "Remoove unused packages..."
 sudo pacman -Rns $(pacman -Qdtq) --noconfirm
 
-echo "Очистка кэша pacman..."
+echo "Clear cache pacman..."
 sudo pacman -Sc --noconfirm
 
-echo "Система обновлена и очищена."
+echo "________________END________________"
