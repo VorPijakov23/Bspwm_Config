@@ -33,7 +33,7 @@ Print
 
 # Volume controls
 XF86Audio{RaiseVolume,LowerVolume,Mute}
-    volume{ --up, --down, --toggle}
+    vol{ --up, --down, --toggle}
 
 # Brightness controls
 XF86MonBrightness{Up,Down}
