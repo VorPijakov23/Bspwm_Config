@@ -8,7 +8,7 @@
  - Another Terminal: [**`st`**](https://st.suckless.org/)
  - App Launcher: [**`Rofi`**](https://github.com/davatorium/rofi)
  - Notify Daemon: [**`Dunst`**](https://github.com/dunst-project/dunst)
- - Shell: [**`Zsh`**](https://github.com/ohmyzsh/ohmyzsh.git)
+ - Shell: [**`Zsh zinit`**](https://github.com/zdharma-continuum/zinit)
 
 # Images Desktop
 
@@ -40,9 +40,9 @@
 
 #### [sxhkdrc](config_files/sxhkdrc) - Файл конфигурации шорткатов системы. Находиться по пути ~/.config/sxhkdrc/ .
 
-#### [nvim](config_files/nvim) - Конфигурация Neo vim (Перешёл с Vs code Oss, пишу свой конфиг, а пока что NvChad)
+#### [nvim](config_files/nvim) - Конфигурация Neo vim (Немного дополненный nvchad)
 
-#### [zshrc](config_files/zshrc) - Файл конфигурации оболочки zsh. (Как по мне alias с btw, это гениально)
+#### [zshrc](config_files/zshrc) - Файл конфигурации оболочки zsh.
 
 
 # PS.

@@ -1,0 +1,85 @@
+#!/bin/env bash
+
+show_help() {
+    echo "Usage: ba <file.asm> [-o <output_file>] [-b <32|64>] [-c]"
+    echo "Assemble and link an x86 assembly file."
+    echo ""
+    echo "Options:"
+    echo "  -o, --out <output_file>  Specify the output executable file name."
+    echo "  -b, --bits <32|64>       Specify the architecture bits (32 or 64). Default is 64."
+    echo "  -c, --clear              Remove .o files after successful build."
+    echo "  -h, --help               Display this help message and exit."
+    exit 0
+}
+
+if [ "$#" -lt 1 ] || [[ "$1" == "-h" || "$1" == "--help" ]]; then
+    show_help
+fi
+
+ASM_FILE="$1"
+OUTPUT_FILE=""
+BITS="64"
+CLEAR=false
+
+shift
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        -o|--out)
+            if [ -n "$2" ] && [ "${2:0:1}" != "-" ]; then
+                OUTPUT_FILE="$2"
+                shift 2
+            else
+                echo "Error: No output file specified after -o/--out."
+                exit 1
+            fi
+            ;;
+        -b|--bits)
+            if [ -n "$2" ] && [ "${2:0:1}" != "-" ]; then
+                if [ "$2" == "32" ] || [ "$2" == "64" ]; then
+                    BITS="$2"
+                else
+                    echo "Error: Invalid value for -b/--bits. Allowed values: 32 or 64."
+                    exit 1
+                fi
+                shift 2
+            else
+                echo "Error: Missing value for -b/--bits flag."
+                exit 1
+            fi
+            ;;
+        -c|--clear)
+            CLEAR=true
+            shift
+            ;;
+        *)
+            echo "Error: Unknown flag: $1"
+            exit 1
+            ;;
+    esac
+done
+
+if [ -z "$OUTPUT_FILE" ]; then
+    OUTPUT_FILE="${ASM_FILE%.asm}"
+fi
+
+if [ "$BITS" == "32" ]; then
+    FORMAT="elf32"
+    ARCH="elf_i386"
+else
+    FORMAT="elf64"
+    ARCH="elf_x86_64"
+fi
+
+nasm -f "$FORMAT" "$ASM_FILE" -o "$OUTPUT_FILE.o" && \
+ld -m "$ARCH" "$OUTPUT_FILE.o" -o "$OUTPUT_FILE"
+
+if [ $? -eq 0 ]; then
+    if [ "$CLEAR" = true ]; then
+        rm -f "$OUTPUT_FILE.o"
+        echo "Removed $OUTPUT_FILE.o"
+    fi
+    exit 0
+else
+    echo "Build failed."
+    exit 1
+fi

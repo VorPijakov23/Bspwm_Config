@@ -8,7 +8,7 @@ super + shift + Return
   
 # Browser
 super + b
-	firefox # qutebrowser, palemoon
+	firefox # qutebrowser, nyxt, surf, modori
 
 super + shift + {t,o,x,e}
 	{telegram-desktop, \
@@ -33,7 +33,7 @@ XF86Audio{RaiseVolume,LowerVolume,Mute}
 
 # Brightness controls
 XF86MonBrightness{Up,Down}
-	{brightnessctl set +2%,brightnessctl set 2%-}
+	{brightnessctl set +5%,brightnessctl set 5%-}
 
 # Toggle mic
 XF86AudioMicMute

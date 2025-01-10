@@ -10,4 +10,4 @@ fi
 killall -q redshift-gtk
 
 sleep 5
-redshift-gtk -l "$coordinates" -t 5700:3500
+redshift-gtk -l "$coordinates" -t 5000:3100

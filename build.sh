@@ -21,6 +21,4 @@ cp -r $HOME/.config/bspwm/ $scripts_dir
 cp -r $HOME/.config/polybar/ $scripts_dir
 cp -r $HOME/.config/sxhkd/* $scripts_dir
 cp -r $HOME/.zshrc $scripts_dir/zshrc
-
-# Options:
 cp -r $HOME/.config/nvim/ $scripts_dir
