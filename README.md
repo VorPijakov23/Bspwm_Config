@@ -1,4 +1,5 @@
 # <center>BSPWM CONFIG</center>
+# <center>ARCHIVED</center>
 # About 
  - OS: [**`Arch Linux`**](https://archlinux.org/)
  - Kernel: [**`Linux zen`**](https://github.com/zen-kernel/zen-kernel)
